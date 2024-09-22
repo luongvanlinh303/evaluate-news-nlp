@@ -1,30 +1,40 @@
-// Replace checkForName with a function that checks the URL
-import { checkForName } from './nameChecker'
-
-// If working on Udacity workspace, update this with the Server API URL e.g. `https://wfkdhyvtzx.prod.udacity-student-workspaces.com/api`
-// const serverURL = 'https://wfkdhyvtzx.prod.udacity-student-workspaces.com/api'
-const serverURL = 'https://localhost:8000/api'
-
-const form = document.getElementById('urlForm');
-form.addEventListener('submit', handleSubmit);
+import { validUrl } from "./validURL";
 
 function handleSubmit(event) {
-    event.preventDefault();
+  event.preventDefault();
 
-    // Get the URL from the input field
-    const formText = document.getElementById('name').value;
+  const baseURL = "http://localhost:8081/sentimentAPI";
+  const url = document.getElementById("url").value; //url inserted by user
+  console.log(url);
 
-    // This is an example code that checks the submitted name. You may remove it from your code
-    checkForName(formText);
-    
-    // Check if the URL is valid
- 
-        // If the URL is valid, send it to the server using the serverURL constant above
-      
+  //CHECK IF URL IS VALID
+  if (validUrl(url)) {
+    fetch(baseURL, {
+      //sends the user's URL to the server for the API to use
+      method: "POST",
+      credentials: "same-origin",
+      mode: "cors",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ url: url }),
+    })
+      .then((res) => res.json()) //translate response obj to json:
+      .then(function (res) {
+        //posts the retrieved data to the webpage
+        console.log(res);
+        document.getElementById("agreement").innerHTML = res.agreement;
+        document.getElementById("subjectivity").innerHTML = res.subjectivity;
+        document.getElementById("confidence").innerHTML = res.confidence;
+        document.getElementById("irony").innerHTML = res.irony;
+      })
+      .catch((error) => {
+        console.log(" an error", error);
+      });
+  } else {
+    alert("The URL is not valid. Please isert another one.");
+  }
 }
 
-// Function to send data to the server
-
-// Export the handleSubmit function
+//EXPORT FILES
 export { handleSubmit };
-

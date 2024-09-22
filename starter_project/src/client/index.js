@@ -1,9 +1,10 @@
-// js files
-import { handleSubmit } from './js/formHandler'
+import { validUrl } from "./js/validURL";
+import { handleSubmit } from "./js/formHandler";
 
+import "./styles/resets.scss";
+import "./styles/base.scss";
+import "./styles/form.scss";
+import "./styles/header.scss";
+import "./styles/footer.scss";
 
-
-// alert("I EXIST")
-// console.log("CHANGE!!");
-
-// sass files
+export { handleSubmit, validUrl };
