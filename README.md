@@ -65,7 +65,8 @@ node -v with version is v12.13.0
       API_KEY=\***\*\*\*\*\*\*\***\*\*\***\*\*\*\*\*\*\***
 
 4. Start the projekt
-   npm run build-dev | Build project
+   npm run build-dev | Build project with mode development
+   npm run build-prod | Build project with mode production
    npm start | Run project
 
 5. Open the browser on http://localhost:8080/
