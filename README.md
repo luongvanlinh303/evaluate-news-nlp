@@ -48,27 +48,27 @@ This was my setup to get the project up and running:
 
 ## Installation
 
-# To improve if npm is installed (via Terminal).
+1. To improve if npm is installed (via Terminal).
 
-node -v with version is v12.13.0
+   node -v with version is v12.13.0
 
-1. Go to the projekt folder and extract the project
+2. Go to the projekt folder and extract the project
    cd <folder>
 
-2. Install the loaders and plugins
+3. Install the loaders and plugins
    npm i
 
-3. Log in for the API Key at meaningcloud.com
+4. Log in for the API Key at meaningcloud.com
 
    1. Install dotenv package
       npm install dotenv
    2. Build a .env file in the root directory and fill in your Key:
       API_KEY=\***\*\*\*\*\*\*\***\*\*\***\*\*\*\*\*\*\***
 
-4. Start the projekt
+5. Start the projekt
 
    1. npm run build-dev | Build project with mode development
    2. npm run build-prod | Build project with mode production
    3. npm start | Run project
 
-5. Open the browser on http://localhost:8080/
+6. Open the browser on http://localhost:8080/
