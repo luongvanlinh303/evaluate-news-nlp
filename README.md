@@ -23,17 +23,17 @@ The goal of this project was to practice with:
 
 This was my setup to get the project up and running:
 
-- installed npm packages
-- set up server for app to run on localhost: 8081
-- installed webpack and webpack cli
-- added babel
-- installed html webpack plugin
-- installed clean webpack plugin
-- installed webpack dev server
-- installed sass loaders: style-loader node-sass css-loader sass-loader
-- set up the MeaningCloud API
-- signed up for an API key
-- set up service workers
+- Installed npm packages
+- Set up server for app to run on localhost: 8081
+- Installed webpack and webpack cli
+- Added babel
+- Installed html webpack plugin
+- Installed clean webpack plugin
+- Installed webpack dev server
+- Installed sass loaders: style-loader node-sass css-loader sass-loader
+- Set up the MeaningCloud API
+- Signed up for an API key
+- Set up service workers
 
 ## Dependencies
 
