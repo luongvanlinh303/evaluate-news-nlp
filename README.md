@@ -48,7 +48,8 @@ This was my setup to get the project up and running:
 
 ## Installation
 
-To improve if npm is installed (via Terminal).
+# To improve if npm is installed (via Terminal).
+
 node -v with version is v12.13.0
 
 1. Go to the projekt folder and extract the project
