@@ -1,4 +1,3 @@
-//VAID URL FUNCTION
 function validUrl(url) {
   var regex =
     /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$/;
@@ -10,5 +9,4 @@ function validUrl(url) {
   }
 }
 
-//EXPORT FILES
 export { validUrl };

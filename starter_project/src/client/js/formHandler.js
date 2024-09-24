@@ -4,13 +4,11 @@ function handleSubmit(event) {
   event.preventDefault();
 
   const baseURL = "http://localhost:8081/sentimentAPI";
-  const url = document.getElementById("url").value; //url inserted by user
+  const url = document.getElementById("url").value;
   console.log(url);
 
-  //CHECK IF URL IS VALID
   if (validUrl(url)) {
     fetch(baseURL, {
-      //sends the user's URL to the server for the API to use
       method: "POST",
       credentials: "same-origin",
       mode: "cors",
@@ -19,9 +17,8 @@ function handleSubmit(event) {
       },
       body: JSON.stringify({ url: url }),
     })
-      .then((res) => res.json()) //translate response obj to json:
+      .then((res) => res.json())
       .then(function (res) {
-        //posts the retrieved data to the webpage
         console.log(res);
         document.getElementById("agreement").innerHTML = res.agreement;
         document.getElementById("subjectivity").innerHTML = res.subjectivity;
@@ -36,5 +33,4 @@ function handleSubmit(event) {
   }
 }
 
-//EXPORT FILES
 export { handleSubmit };
