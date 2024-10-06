@@ -4,6 +4,8 @@ const express = require("express");
 const cors = require("cors");
 const app = express();
 const request = require("request");
+const apiKey = process.env.API_KEY;
+const port = 8080;
 
 dotenv.config();
 app.use(express.static("dist"));
@@ -11,13 +13,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors());
 
-const apiKey = process.env.API_KEY;
-
 app.get("/", function (req, res) {
   res.sendFile("dist/index.html");
 });
 
-const port = 8081;
 app.listen(port, function () {
   console.log(`Example app listening on port ${port}!`);
 });
