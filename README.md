@@ -8,7 +8,7 @@ To build a News Article/ Blog Sentiment Analysis website using Natural Language 
 
 > Natural language processing (NLP) is a subfield of computer science, information engineering, and artificial intelligence
 > concerned with the interactions between computers and human (natural) languages, in particular how to program computers to
-> process and analyze large amounts of natural language data
+> Process and analyze large amounts of natural language data
 
 ## Building
 
@@ -19,12 +19,12 @@ The goal of this project was to practice with:
 - Webpack Loaders and Plugins
 - Creating layouts and page design
 - Service workers
-- Using APIs and creating requests to external urls
+- Using APIs and creating requests to external URLs
 
 This was my setup to get the project up and running:
 
 - Installed npm packages
-- Set up server for app to run on localhost: 8081
+- Set up a server for the app to run on localhost: 8081
 - Installed webpack and webpack cli
 - Added babel
 - Installed html webpack plugin
@@ -50,9 +50,9 @@ This was my setup to get the project up and running:
 
 1. To improve if npm is installed (via Terminal).
 
-   node -v with version is v12.13.0
+   node -v with version v12.13.0
 
-2. Go to the projekt folder and extract the project
+2. Go to the project folder and extract the project
    cd <folder>
 
 3. Install the loaders and plugins
@@ -65,7 +65,7 @@ This was my setup to get the project up and running:
    2. Build a .env file in the root directory and fill in your Key:
       API_KEY=\***\*\*\*\*\*\*\***\*\*\***\*\*\*\*\*\*\***
 
-5. Start the projekt
+5. Start the project
 
    1. npm run build-dev | Build project with mode development
    2. npm run build-prod | Build project with mode production
